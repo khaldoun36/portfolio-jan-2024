@@ -1,0 +1,151 @@
+@import "./reset.css";
+@import "./design-variables.css";
+
+/* importing the locally hosted font */
+@font-face {
+  font-family: "GeistVariableVF";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url("/fonts/GeistVariableVF.woff2") format("woff2");
+}
+
+html,
+body,
+#__nuxt {
+  font-family: "Geist", system-ui, sans-serif;
+  background-color: var(--clr-background);
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "GeistVariableVF", sans-serif;
+    font-optical-sizing: auto;
+  }
+}
+
+/* ************************* */
+/* ***  Main Components **** */
+/* ************************* */
+
+/* 
+  1. Container
+*/
+.content-grid {
+  display: grid;
+  grid-template-columns:
+    [full-width-start] var(--space-16)
+    [content-start] 1fr [content-end] var(--space-16)
+    [full-width-end];
+}
+
+.content-grid > :not(.full-width) {
+  grid-column: content;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+}
+
+@media screen and (min-width: 64rem) {
+  .content-grid {
+    grid-template-columns:
+      [full-width-start] 1fr
+      [content-start] repeat(12, minmax(0, var(--space-64))) [content-end] 1fr
+      [full-width-end];
+    column-gap: var(--space-32);
+  }
+}
+
+/* 
+  2. Border radius
+*/
+
+.rounded {
+  border-radius: var(--space-8);
+}
+
+.rounded-pill {
+  border-radius: var(--space-48);
+}
+
+/* 
+  3. General sanitization
+*/
+
+section:not(.main) {
+  padding-top: var(--space-64);
+}
+
+/* ************************* */
+/* ******  Typography ****** */
+/* ************************* */
+
+/* 
+  1. Typescale
+*/
+.text-xs {
+  font: var(--fs-50); /* 12px */
+}
+
+.text-sm {
+  font: var(--fs-100); /* 14px */
+}
+
+.text-base {
+  font: var(--fs-200); /* 16px */
+}
+
+.text-lg {
+  font: var(--fs-300); /* 18px */
+}
+
+.text-xl {
+  font: var(--fs-400); /* 24px */
+}
+
+.text-2xl {
+  font: var(--fs-500); /* 28px */
+}
+
+.text-3xl {
+  font: var(--fs-600); /* 36px */
+}
+
+.text-4xl {
+  font: var(--fs-700); /* 40px */
+}
+
+@media screen and (min-width: 64rem) {
+  .text-2xl {
+    font: var(--fs-600); /* 36px */
+  }
+}
+
+/* 
+  2. Text weight
+*/
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* 
+  3. Text color
+*/
+
+.text-light {
+  color: hsl(var(--slate-50));
+}
+
+.text-dark {
+  color: hsl(var(--slate-400));
+}
