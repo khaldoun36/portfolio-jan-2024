@@ -8,6 +8,15 @@ export default defineNuxtConfig({
   // Global head config
   app: {
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
+      title: "Khaldoo.Dev",
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+      ],
+
       link: [
         {
           rel: "preload",
