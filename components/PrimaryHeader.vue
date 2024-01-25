@@ -1,14 +1,7 @@
 <template>
   <header class="primary-header full-width content-grid">
     <div class="primary-header__layout">
-      <NuxtLink to="/" class="logo">
-        <NuxtImg
-          src="/images/Logo.svg"
-          alt="Website's logo"
-          width="190"
-          height="36"
-        />
-      </NuxtLink>
+      <PrimaryLogo />
       <nav class="primary-nav rounded-pill">
         <Button
           :as="NuxtLink"

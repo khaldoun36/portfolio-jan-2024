@@ -1,14 +1,7 @@
 <template>
   <footer class="primary-footer full-width content-grid">
     <div class="primary-footer__layout">
-      <NuxtLink to="/" class="logo">
-        <NuxtImg
-          src="/images/Logo.svg"
-          alt="Website's logo"
-          width="190"
-          height="36"
-        />
-      </NuxtLink>
+      <PrimaryLogo />
       <nav class="primary-nav">
         <Button
           :as="NuxtLink"
@@ -41,7 +34,7 @@
   .primary-footer__layout {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
   }
 
   .primary-nav {
@@ -77,7 +70,6 @@
     .primary-footer__layout {
       gap: var(--space-8);
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
     }
   }
