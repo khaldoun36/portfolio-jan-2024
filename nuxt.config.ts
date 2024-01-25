@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "preload",
-          href: "/_nuxt/fonts/GeistVariableVF.woff2",
+          href: "/fonts/GeistVariableVF.woff2",
           crossorigin: "",
           as: "font",
           type: "font/woff2",
