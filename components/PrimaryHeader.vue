@@ -99,13 +99,10 @@
   /* ********************************** */
 
   @media screen and (max-width: 54rem) {
-    .logo {
-      width: 165px;
-    }
-
     .primary-header {
       border: 0;
       padding-block: var(--space-16);
+      padding-bottom: var(--space-0);
     }
 
     .primary-nav {

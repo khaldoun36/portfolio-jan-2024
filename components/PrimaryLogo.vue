@@ -2,7 +2,7 @@
   <NuxtLink to="/" class="logo">
     <span class="text-light">khaldoon</span>
     <div class="logo-circle"></div>
-    <span class="text-2xl text-light font-semibold">dev</span>
+    <span class="text-light">dev</span>
   </NuxtLink>
 </template>
 
@@ -19,7 +19,7 @@
   }
 
   .logo > span {
-    font: var(--fs-500);
+    font: var(--fs-400);
     font-weight: 600;
   }
   .logo-circle {
@@ -31,5 +31,12 @@
       hsl(var(--indigo-500)) 0%,
       hsl(var(--indigo-300)) 100%
     );
+  }
+
+  @media screen and (min-width: 27rem) {
+    .logo > span {
+      font: var(--fs-500);
+      font-weight: 600;
+    }
   }
 </style>

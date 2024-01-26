@@ -42,7 +42,6 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--space-4);
-    padding: var(--space-4);
   }
 
   .nav-link {
@@ -55,6 +54,10 @@
     .nav-link:hover,
     .nav-link:focus {
       background-color: var(--clr-nav-link-hover);
+    }
+
+    .nav-link {
+      padding-inline: var(--space-20);
     }
   }
 
@@ -71,6 +74,14 @@
       gap: var(--space-8);
       flex-direction: column;
       align-items: center;
+    }
+
+    .primary-nav {
+      gap: var(--space-20);
+    }
+
+    .nav-link {
+      padding-inline: 0;
     }
   }
 </style>
