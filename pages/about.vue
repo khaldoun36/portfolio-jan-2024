@@ -128,7 +128,6 @@
     .about-me__layout {
       display: grid;
       grid-template-columns: subgrid;
-      grid-auto-rows: min-content;
     }
 
     .about-me-main {

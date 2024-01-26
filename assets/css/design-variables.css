@@ -75,8 +75,15 @@
   --clr-nav-link-hover: hsl(var(--slate-900));
 
   --clr-border: hsl(var(--slate-700));
+  --clr-border-hover: hsl(var(--slate-500));
 
   --clr-header-background: hsl(var(--slate-950) / 0.7);
+
+  --clr-card-gradient: linear-gradient(
+    147deg,
+    hsl(var(--slate-800)) 17.97%,
+    hsl(var(--slate-900)) 100%
+  );
 }
 
 /* 

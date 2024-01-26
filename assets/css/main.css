@@ -149,3 +149,17 @@ section:not(.main) {
 .text-dark {
   color: hsl(var(--slate-400));
 }
+
+.text-gradient {
+  background: var(
+    --gradient-indigo,
+    linear-gradient(
+      315deg,
+      hsl(var(--indigo-500)) 0%,
+      hsl(var(--indigo-300)) 100%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

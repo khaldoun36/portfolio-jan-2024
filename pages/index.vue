@@ -24,6 +24,9 @@
     </main>
     <section class="featured-work">
       <h2 class="text-xl text-light font-semibold">Featured</h2>
+      <div class="featured-articles-wrapper">
+        <FeaturedCard v-for="n in 6" :key="n" class="featured-card__layout" />
+      </div>
     </section>
   </div>
 </template>
@@ -48,5 +51,20 @@
     gap: var(--space-24);
 
     padding-top: var(--space-24);
+  }
+
+  .featured-articles-wrapper {
+    padding-top: var(--space-32);
+    display: grid;
+    gap: var(--space-32);
+  }
+
+  @media screen and (min-width: 64rem) {
+    .featured-articles-wrapper {
+      grid-template-columns: repeat(12, minmax(0, var(--space-64)));
+    }
+    .featured-card__layout {
+      grid-column: span 4;
+    }
   }
 </style>
