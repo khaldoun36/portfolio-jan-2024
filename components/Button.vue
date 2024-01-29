@@ -49,6 +49,7 @@
     font-weight: 500;
 
     color: hsl(var(--slate-50));
+    transition: all 250ms ease-in-out;
   }
 
   /* ******************************* */
@@ -64,7 +65,6 @@
 
     background-size: 300%;
     animation: anime 6s linear infinite;
-    transition: all 250ms ease-in-out;
   }
 
   .btn.btn__gradient:before,
@@ -95,7 +95,8 @@
     }
   }
 
-  .btn.btn__gradient:active {
+  .btn.btn__gradient:active,
+  .btn.btn__secondary:active {
     transform: scale(0.95);
   }
 
@@ -112,7 +113,12 @@
   @media screen and (hover: hover) {
     .btn.btn__gradient:hover,
     .btn.btn__gradient:focus {
-      filter: brightness(1.125);
+      filter: brightness(1.3);
+    }
+    .btn.btn__secondary:hover,
+    .btn.btn__secondary:focus {
+      color: hsl(var(--slate-50));
+      border-color: var(--clr-border-hover);
     }
   }
 </style>

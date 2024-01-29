@@ -13,12 +13,13 @@
 <style>
   .main {
     padding-block: var(--space-80);
+
+    min-height: 100dvh;
   }
 
   @media screen and (min-width: 64rem) {
     .main {
       padding-block: var(--space-96);
-      min-height: 100dvh;
     }
   }
 </style>

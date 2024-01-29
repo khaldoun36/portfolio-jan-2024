@@ -40,8 +40,8 @@
 </script>
 
 <style scoped>
-  .hero-section {
-    max-width: 90ch;
+  .hero-section > h1 {
+    max-width: 40ch;
   }
 
   .hero-buttons {

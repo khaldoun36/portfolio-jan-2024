@@ -15,6 +15,7 @@ body,
 #__nuxt {
   font-family: "Geist", system-ui, sans-serif;
   background-color: var(--clr-background);
+  color-scheme: only dark;
 }
 
 @supports (font-variation-settings: normal) {
@@ -73,8 +74,16 @@ body,
   3. General sanitization
 */
 
-section:not(.main) {
+section,
+main {
   padding-top: var(--space-64);
+}
+
+@media screen and (min-width: 64rem) {
+  section,
+  main {
+    padding-top: var(--space-80);
+  }
 }
 
 /* ************************* */
